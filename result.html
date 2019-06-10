@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="kr">
+    <head>
+        <!-- 합쳐지고 최소화된 최신 CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+                
+        <!-- 부가적인 테마 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        
+        <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        
+        <title>
+            원하시는 결과를 얻으셨나요??
+        </title>
+    </head>
+    <body>
+<h1><p class="bg-info">입력해주신 결과 페이지 입니다.</p></h1>
+<br><br>
+
+<h1>당신이 입력한 글자수는</h1>
+<h1>{{total}}</h1>
+
+<a href="{%url 'home'%}">다시 한번 글자수 세러가기</a>
+
+<h2>입력한 텍스트 : </h2>
+{{full}}
+
+<h1>입력한 단어수 : </h1>
+{% for word, howmany in dictionary %}
+{{word}} :  {{howmany}}
+<br>
+{%endfor%}
+</body>
+</html>
